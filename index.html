@@ -26,11 +26,14 @@
         .reveal .slides {
             text-align: left;
         }
-        .reveal h1, .reveal h2 {
-            color: #f0f0f0;
+        .reveal h1, .reveal h2, .reveal p, .reveal li {
+            color: white;
         }
-        .reveal p, .reveal li {
-            font-size: 0.8em;
+        .reveal .slide:nth-child(odd) {
+            background-color: #606060;
+        }
+        .reveal .slide:nth-child(even) {
+            background-color: #2B2B2B;
         }
         .timeline {
             list-style-type: none;
@@ -45,7 +48,7 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: #f0f0f0;
+            color: white;
         }
     </style>
     <script>
@@ -82,12 +85,12 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <section>
+            <section class="slide">
                 <h1>Julian Assange: Preocupaciones sobre Derechos Humanos</h1>
                 <p>Una cronología de eventos clave y cuestiones de derechos humanos</p>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Cronología de Eventos Clave</h2>
                 <ul class="timeline">
                     <li><strong>2006:</strong> Fundación de WikiLeaks</li>
@@ -98,7 +101,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Asilo en la Embajada de Ecuador (2012-2019)</h2>
                 <ul>
                     <li>Buscó evitar la extradición a Suecia y potencialmente a EE.UU.</li>
@@ -108,7 +111,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Proceso de Extradición y Preocupaciones</h2>
                 <ul>
                     <li>Inicialmente enfrentó extradición a Suecia (acusaciones de agresión sexual)</li>
@@ -118,7 +121,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Violaciones de Derechos Humanos Documentadas</h2>
                 <ul>
                     <li>Detención en la prisión de alta seguridad de Belmarsh desde 2019</li>
@@ -128,7 +131,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Evaluaciones de Expertos</h2>
                 <ul>
                     <li>Relator Especial de la ONU sobre la Tortura: las condiciones equivalen a tortura psicológica</li>
@@ -137,7 +140,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Riesgos de la Extradición</h2>
                 <ul>
                     <li>Posible tortura o trato inhumano en EE.UU.</li>
@@ -147,7 +150,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Preocupaciones Actuales sobre Derechos Humanos</h2>
                 <ul>
                     <li>Detención arbitraria</li>
@@ -157,7 +160,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="slide">
                 <h2>Conclusión</h2>
                 <p>El caso de Julian Assange plantea importantes preocupaciones sobre derechos humanos, incluyendo:</p>
                 <ul>
@@ -166,7 +169,7 @@
                     <li>Libertad de prensa y expresión</li>
                     <li>Derecho a la salud y condiciones de vida adecuadas</li>
                 </ul>
-                <p>Estos temas resaltan la compleja intersección entre seguridad nacional, libertad de prensa y derechos individuales.</p>
+            
             </section>
         </div>
     </div>
