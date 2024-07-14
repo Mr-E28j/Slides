@@ -48,6 +48,36 @@
             color: #f0f0f0;
         }
     </style>
+    <script>
+        // Función para obtener los datos de oEmbed de Iframely
+        async function fetchOEmbedData(url, apiKey) {
+            try {
+                const response = await fetch(`https://iframe.ly/api/oembed?url=${encodeURIComponent(url)}&api_key=${apiKey}`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching oEmbed data:', error);
+                return null;
+            }
+        }
+
+        // Función para insertar el contenido embebido
+        async function embedContent() {
+            const url = 'https://mr-e28j.github.io/Slides/';
+            const apiKey = '1e9dc52ec053bcff18745e';
+            const oEmbedData = await fetchOEmbedData(url, apiKey);
+
+            if (oEmbedData && oEmbedData.html) {
+                const embedContainer = document.getElementById('embed-container');
+                embedContainer.innerHTML = oEmbedData.html;
+            } else {
+                console.error('No oEmbed HTML content available');
+            }
+        }
+
+        // Ejecutar la función cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', embedContent);
+    </script>
 </head>
 <body>
     <div class="reveal">
@@ -140,6 +170,7 @@
             </section>
         </div>
     </div>
+    <div id="embed-container"></div>
     <script>
         Reveal.initialize({
             controls: true,
