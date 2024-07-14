@@ -4,21 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julian Assange: Preocupaciones sobre Derechos Humanos</title>
-    <!-- Metaetiquetas Iframely -->
-    <!-- Metadatos para Iframely y redes sociales -->
-    <meta property="og:title" content="Julian Assange: Preocupaciones sobre Derechos Humanos">
-    <meta property="og:description" content="Una cronología de eventos clave y cuestiones de derechos humanos relacionadas con Julian Assange.">
-    <meta property="og:image" content="https://mr-e28j.github.io/Slides/preview-image.jpg">
-    <meta property="og:url" content="https://mr-e28j.github.io/Slides/">
-    <meta property="og:type" content="website">
-    
-    <!-- Metadatos específicos de Iframely -->
-    <link rel="iframely player" href="https://mr-e28j.github.io/Slides/" media="aspect-ratio: 16/9">
-    <meta property="canva:title" content="Julian Assange: Preocupaciones sobre Derechos Humanos" />
-    <meta property="canva:description" content="Una cronología de eventos clave y cuestiones de derechos humanos." />
-    <meta property="canva:author" content="Julio Solano" />
-    <meta property="canva:date" content="2024-07-13" />
-    <!-- Fin de metaetiquetas Iframely -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/moon.min.css">
@@ -50,136 +35,123 @@
             left: 0;
             color: white;
         }
+        .reveal .slides section .fragment {
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
+        .reveal .slides section .fragment.visible {
+            opacity: 1;
+        }
+        .reveal .slides section .fragment.grow {
+            transform: scale(0.5);
+        }
+        .reveal .slides section .fragment.grow.visible {
+            transform: scale(1);
+        }
     </style>
-    <script>
-        // Función para obtener los datos de oEmbed de Iframely
-        async function fetchOEmbedData(url, apiKey) {
-            try {
-                const response = await fetch(`https://iframe.ly/api/oembed?url=${encodeURIComponent(url)}&api_key=${apiKey}`);
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error('Error fetching oEmbed data:', error);
-                return null;
-            }
-        }
-
-        // Función para insertar el contenido embebido
-        async function embedContent() {
-            const url = 'https://mr-e28j.github.io/Slides/';
-            const apiKey = '1e9dc52ec053bcff18745e';
-            const oEmbedData = await fetchOEmbedData(url, apiKey);
-
-            if (oEmbedData && oEmbedData.html) {
-                const embedContainer = document.getElementById('embed-container');
-                embedContainer.innerHTML = oEmbedData.html;
-            } else {
-                console.error('No oEmbed HTML content available');
-            }
-        }
-
-        // Ejecutar la función cuando el documento esté listo
-        document.addEventListener('DOMContentLoaded', embedContent);
-    </script>
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
-            <section class="slide">
+            <section class="slide" data-transition="zoom">
                 <h1>Julian Assange: Preocupaciones sobre Derechos Humanos</h1>
-                <p>Una cronología de eventos clave y cuestiones de derechos humanos</p>
+                <p class="fragment fade-up">Una cronología de eventos clave y cuestiones de derechos humanos</p>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="slide">
                 <h2>Cronología de Eventos Clave</h2>
                 <ul class="timeline">
-                    <li><strong>2006:</strong> Fundación de WikiLeaks</li>
-                    <li><strong>2010:</strong> Importantes filtraciones de documentos clasificados</li>
-                    <li><strong>2012-2019:</strong> Asilo en la Embajada de Ecuador</li>
-                    <li><strong>2019:</strong> Arresto y detención en la prisión de Belmarsh</li>
-                    <li><strong>2019-Presente:</strong> Batalla legal contra la extradición en curso</li>
+                    <li class="fragment fade-right"><strong>2006:</strong> Fundación de WikiLeaks</li>
+                    <li class="fragment fade-right"><strong>2010:</strong> Importantes filtraciones de documentos clasificados</li>
+                    <li class="fragment fade-right"><strong>2012-2019:</strong> Asilo en la Embajada de Ecuador</li>
+                    <li class="fragment fade-right"><strong>2019:</strong> Arresto y detención en la prisión de Belmarsh</li>
+                    <li class="fragment fade-right"><strong>2019-Presente:</strong> Batalla legal contra la extradición en curso</li>
                 </ul>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="fade">
                 <h2>Asilo en la Embajada de Ecuador (2012-2019)</h2>
                 <ul>
-                    <li>Buscó evitar la extradición a Suecia y potencialmente a EE.UU.</li>
-                    <li>Su salud se deterioró debido al aislamiento prolongado</li>
-                    <li>Acceso limitado a atención médica</li>
-                    <li>Asilo revocado en 2019, lo que llevó a su arresto</li>
+                    <li class="fragment fade-up">Buscó evitar la extradición a Suecia y potencialmente a EE.UU.</li>
+                    <li class="fragment fade-up">Su salud se deterioró debido al aislamiento prolongado</li>
+                    <li class="fragment fade-up">Acceso limitado a atención médica</li>
+                    <li class="fragment fade-up">Asilo revocado en 2019, lo que llevó a su arresto</li>
                 </ul>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="convex">
                 <h2>Proceso de Extradición y Preocupaciones</h2>
                 <ul>
-                    <li>Inicialmente enfrentó extradición a Suecia (acusaciones de agresión sexual)</li>
-                    <li>Ahora enfrenta extradición a EE.UU. (cargos de espionaje)</li>
-                    <li>Preocupaciones sobre un juicio justo y el trato en EE.UU.</li>
-                    <li>Riesgo de penas severas, incluyendo confinamiento solitario prolongado</li>
+                    <li class="fragment fade-left">Inicialmente enfrentó extradición a Suecia (acusaciones de agresión sexual)</li>
+                    <li class="fragment fade-left">Ahora enfrenta extradición a EE.UU. (cargos de espionaje)</li>
+                    <li class="fragment fade-left">Preocupaciones sobre un juicio justo y el trato en EE.UU.</li>
+                    <li class="fragment fade-left">Riesgo de penas severas, incluyendo confinamiento solitario prolongado</li>
                 </ul>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="concave">
                 <h2>Violaciones de Derechos Humanos Documentadas</h2>
                 <ul>
-                    <li>Detención en la prisión de alta seguridad de Belmarsh desde 2019</li>
-                    <li>Sometido a aislamiento (23 horas/día en solitario)</li>
-                    <li>Impacto severo en su salud mental y física</li>
-                    <li>Acceso limitado a asesoría legal y materiales para preparar su caso</li>
+                    <li class="fragment fade-down">Detención en la prisión de alta seguridad de Belmarsh desde 2019</li>
+                    <li class="fragment fade-down">Sometido a aislamiento (23 horas/día en solitario)</li>
+                    <li class="fragment fade-down">Impacto severo en su salud mental y física</li>
+                    <li class="fragment fade-down">Acceso limitado a asesoría legal y materiales para preparar su caso</li>
                 </ul>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="zoom">
                 <h2>Evaluaciones de Expertos</h2>
                 <ul>
-                    <li>Relator Especial de la ONU sobre la Tortura: las condiciones equivalen a tortura psicológica</li>
-                    <li>Expertos médicos: serias preocupaciones sobre el deterioro de su salud</li>
-                    <li>Organizaciones de derechos humanos: llamados a su liberación inmediata</li>
+                    <li class="fragment fade-in-then-semi-out">Relator Especial de la ONU sobre la Tortura: las condiciones equivalen a tortura psicológica</li>
+                    <li class="fragment fade-in-then-semi-out">Expertos médicos: serias preocupaciones sobre el deterioro de su salud</li>
+                    <li class="fragment fade-in-then-semi-out">Organizaciones de derechos humanos: llamados a su liberación inmediata</li>
                 </ul>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="slide">
                 <h2>Riesgos de la Extradición</h2>
                 <ul>
-                    <li>Posible tortura o trato inhumano en EE.UU.</li>
-                    <li>Violación de leyes internacionales contra la tortura</li>
-                    <li>Amenaza a la libertad de prensa y al periodismo de investigación</li>
-                    <li>Efecto intimidatorio sobre denunciantes y la transparencia</li>
+                    <li class="fragment grow">Posible tortura o trato inhumano en EE.UU.</li>
+                    <li class="fragment grow">Violación de leyes internacionales contra la tortura</li>
+                    <li class="fragment grow">Amenaza a la libertad de prensa y al periodismo de investigación</li>
+                    <li class="fragment grow">Efecto intimidatorio sobre denunciantes y la transparencia</li>
                 </ul>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="fade">
                 <h2>Preocupaciones Actuales sobre Derechos Humanos</h2>
                 <ul>
-                    <li>Detención arbitraria</li>
-                    <li>Violación del derecho a la libertad y seguridad personal</li>
-                    <li>Deterioro de la salud mental y física</li>
-                    <li>Acceso limitado a familia y red de apoyo</li>
+                    <li class="fragment fade-up">Detención arbitraria</li>
+                    <li class="fragment fade-up">Violación del derecho a la libertad y seguridad personal</li>
+                    <li class="fragment fade-up">Deterioro de la salud mental y física</li>
+                    <li class="fragment fade-up">Acceso limitado a familia y red de apoyo</li>
                 </ul>
             </section>
 
-            <section class="slide">
+            <section class="slide" data-transition="convex">
                 <h2>Conclusión</h2>
-                <p>El caso de Julian Assange plantea importantes preocupaciones sobre derechos humanos, incluyendo:</p>
+                <p class="fragment grow">El caso de Julian Assange plantea importantes preocupaciones sobre derechos humanos, incluyendo:</p>
                 <ul>
-                    <li>Derecho a un juicio justo</li>
-                    <li>Libertad de tortura y trato inhumano</li>
-                    <li>Libertad de prensa y expresión</li>
-                    <li>Derecho a la salud y condiciones de vida adecuadas</li>
+                    <li class="fragment fade-up">Derecho a un juicio justo</li>
+                    <li class="fragment fade-up">Libertad de tortura y trato inhumano</li>
+                    <li class="fragment fade-up">Libertad de prensa y expresión</li>
+                    <li class="fragment fade-up">Derecho a la salud y condiciones de vida adecuadas</li>
                 </ul>
-            
             </section>
         </div>
     </div>
-    <div id="embed-container"></div>
     <script>
         Reveal.initialize({
             controls: true,
             progress: true,
             center: true,
-            hash: true
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            viewDistance: 3,
+            autoSlide: 5000,
+            loop: true,
+            fragments: true
         });
     </script>
 </body>
